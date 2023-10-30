@@ -20,6 +20,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '16.x'
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+         creds: ${{ secrets.AZURE_CLIENT_ID }}
+         secret: ${{ secrets.AZURE_CLIENT_SECRET }}
+         tenant: ${{ secrets.AZURE_TENANT_ID }}
 
       - name: npm install, build, and test
         run: |
