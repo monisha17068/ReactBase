@@ -57,7 +57,7 @@ jobs:
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'noblecausecode-react'
+          app-name: 'monishareact'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_62BB6EFACF37467A8110458CC720AD83 }}
           package: release.zip
